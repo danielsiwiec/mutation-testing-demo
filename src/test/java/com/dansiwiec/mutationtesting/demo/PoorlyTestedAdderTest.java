@@ -4,17 +4,17 @@ import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class PoorlyTestAdderTest {
+public class PoorlyTestedAdderTest {
 
-    private PoorlyTestAdder poorlyTestAdder = new PoorlyTestAdder();
+    private PoorlyTestedAdder poorlyTestedAdder = new PoorlyTestedAdder();
 
     @Test
     public void testAllowingTheMutant() {
-        assertThat(poorlyTestAdder.add(2,0)).isEqualTo(2);
+        assertThat(poorlyTestedAdder.add(2,0)).isEqualTo(2);
     }
 
 //    @Test
 //    public void testKillingTheMutant() {
-//        assertThat(poorlyTestAdder.add(2,5)).isEqualTo(7);
+//        assertThat(poorlyTestedAdder.add(2,5)).isEqualTo(7);
 //    }
 }
