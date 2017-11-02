@@ -3,7 +3,6 @@ This is to showcase some simple scenarios in which mutation testing is helpful.
 
 ## Prerequisites
 - jdk 1.8
-- gradle
 
 ## Running
 `./gradlew pitest`
