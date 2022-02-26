@@ -2,13 +2,15 @@ buildscript {
     repositories {
         mavenCentral()
     }
-    dependencies {
-        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.1.11'
-    }
+    // dependencies {
+        // classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.1.11'
+    // }
 }
 
-apply plugin: 'java'
-apply plugin: 'info.solidsoft.pitest'
+plugins {
+    id 'java'
+    id 'info.solidsoft.pitest' version '1.7.0'
+}
 
 group = 'com.dansiwiec.mutationtesting.demo'
 
@@ -17,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
-    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.8.0'
-    testCompile 'org.pitest:pitest:1.2.4'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:3.8.0'
+    testImplementation 'org.pitest:pitest:1.2.4'
 }
